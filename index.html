@@ -1,25 +1,207 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>タイマーアプリ</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude について学ぼう</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>タイマー</h1>
-    <div class="display" id="display">00:00:00</div>
-    <div class="controls">
-      <button id="startBtn" class="btn btn-start">スタート</button>
-      <button id="stopBtn" class="btn btn-stop" disabled>ストップ</button>
-      <button id="resetBtn" class="btn btn-reset">リセット</button>
+  <header>
+    <div class="header-inner">
+      <div class="logo">🤖 Claude Guide</div>
+      <nav>
+        <a href="#what">Claudeとは</a>
+        <a href="#features">特徴</a>
+        <a href="#models">モデル</a>
+        <a href="#usecases">活用例</a>
+        <a href="#start">始め方</a>
+      </nav>
     </div>
-    <div class="laps">
-      <button id="lapBtn" class="btn btn-lap" disabled>ラップ</button>
-      <ul id="lapList"></ul>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Claudeについて<br />学ぼう</h1>
+      <p>Anthropicが開発した次世代AIアシスタント。<br />安全性・誠実さ・知性を兼ね備えた会話型AI。</p>
+      <a href="#what" class="btn">詳しく見る</a>
     </div>
-  </div>
-  <script src="app.js"></script>
+    <div class="hero-visual">
+      <div class="claude-icon">✦</div>
+    </div>
+  </section>
+
+  <section id="what" class="section">
+    <div class="container">
+      <h2>Claudeとは？</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>開発元</h3>
+          <p>Anthropicが開発。AIの安全性研究に注力する企業で、元OpenAIメンバーが2021年に設立しました。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <h3>会話AI</h3>
+          <p>自然言語で対話できるAIアシスタント。質問への回答・文章作成・コーディングなど多岐にわたるタスクをこなします。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>安全性重視</h3>
+          <p>Constitutional AI（憲法的AI）という独自手法で、誠実で安全な応答ができるよう設計されています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section section-alt">
+    <div class="container">
+      <h2>主な特徴</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <span class="feature-icon">📖</span>
+          <h3>長文コンテキスト</h3>
+          <p>最大200,000トークン以上のコンテキストウィンドウにより、長い文書や会話も一度に処理可能。</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🖼️</span>
+          <h3>マルチモーダル</h3>
+          <p>テキストだけでなく、画像・PDFなどのファイルも理解して応答できます。</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">💻</span>
+          <h3>コーディング支援</h3>
+          <p>Python・JavaScript・Rustなど多くの言語に対応。コードの生成・レビュー・デバッグを支援。</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🌐</span>
+          <h3>多言語対応</h3>
+          <p>日本語を含む多数の言語に対応。自然な日本語で会話・作業ができます。</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🔗</span>
+          <h3>API連携</h3>
+          <p>Anthropic APIを通じて自社アプリやサービスにClaudeの能力を組み込めます。</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🤔</span>
+          <h3>拡張思考</h3>
+          <p>複雑な問題に対して、段階的に思考を深めて精度の高い回答を生成する拡張思考モードを搭載。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="models" class="section">
+    <div class="container">
+      <h2>モデルラインナップ</h2>
+      <div class="models">
+        <div class="model model-opus">
+          <div class="model-badge">最高性能</div>
+          <h3>Claude Opus</h3>
+          <p>最も高度なモデル。複雑な推論・研究・高度なコーディングタスクに最適。</p>
+          <ul>
+            <li>最高レベルの知性</li>
+            <li>複雑なタスク向け</li>
+            <li>深い分析力</li>
+          </ul>
+        </div>
+        <div class="model model-sonnet">
+          <div class="model-badge">バランス型</div>
+          <h3>Claude Sonnet</h3>
+          <p>性能とコストのベストバランス。ほとんどのビジネス・開発用途に推奨。</p>
+          <ul>
+            <li>高いパフォーマンス</li>
+            <li>コスト効率が高い</li>
+            <li>幅広いタスクに対応</li>
+          </ul>
+        </div>
+        <div class="model model-haiku">
+          <div class="model-badge">高速・軽量</div>
+          <h3>Claude Haiku</h3>
+          <p>最速・最軽量モデル。リアルタイム応答や大量処理が必要な用途に最適。</p>
+          <ul>
+            <li>超高速応答</li>
+            <li>低コスト</li>
+            <li>大量処理向け</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="usecases" class="section section-alt">
+    <div class="container">
+      <h2>活用シーン</h2>
+      <div class="usecases">
+        <div class="usecase">
+          <div class="usecase-num">01</div>
+          <h3>ライティング支援</h3>
+          <p>メール・レポート・ブログ記事など、あらゆる文章の作成・校正・翻訳をサポート。</p>
+        </div>
+        <div class="usecase">
+          <div class="usecase-num">02</div>
+          <h3>ソフトウェア開発</h3>
+          <p>コード生成・バグ修正・コードレビュー・ドキュメント作成など開発全般を効率化。</p>
+        </div>
+        <div class="usecase">
+          <div class="usecase-num">03</div>
+          <h3>データ分析</h3>
+          <p>CSVやPDFのデータを読み込み、分析・可視化・インサイト抽出を行います。</p>
+        </div>
+        <div class="usecase">
+          <div class="usecase-num">04</div>
+          <h3>教育・学習</h3>
+          <p>難しい概念をわかりやすく解説。個別チューターとして学習を加速させます。</p>
+        </div>
+        <div class="usecase">
+          <div class="usecase-num">05</div>
+          <h3>カスタマーサポート</h3>
+          <p>企業のFAQや製品情報を学習させ、24時間対応の自動サポートを構築できます。</p>
+        </div>
+        <div class="usecase">
+          <div class="usecase-num">06</div>
+          <h3>リサーチ・調査</h3>
+          <p>大量の文書を要約・比較・分析し、リサーチ作業を大幅に効率化します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="section">
+    <div class="container">
+      <h2>始め方</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>アカウント作成</h3>
+          <p>claude.ai にアクセスしてAnthropicアカウントを作成。無料プランで今すぐ始められます。</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>会話を開始</h3>
+          <p>テキストボックスに質問やタスクを入力するだけ。すぐにClaudeが応答します。</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>API活用（任意）</h3>
+          <p>開発者はAnthropicのAPIキーを取得することで、アプリへの組み込みが可能です。</p>
+        </div>
+      </div>
+      <div class="cta-box">
+        <p>Claude を体験してみよう</p>
+        <span class="cta-note">※ claude.ai にアクセスして始められます</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>このサイトはClaudeについて学ぶための情報サイトです。</p>
+      <p class="footer-sub">Claudeは Anthropic, PBC の製品です。</p>
+    </div>
+  </footer>
 </body>
 </html>
