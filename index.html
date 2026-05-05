@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タイマーアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>タイマー</h1>
+    <div class="display" id="display">00:00:00</div>
+    <div class="controls">
+      <button id="startBtn" class="btn btn-start">スタート</button>
+      <button id="stopBtn" class="btn btn-stop" disabled>ストップ</button>
+      <button id="resetBtn" class="btn btn-reset">リセット</button>
+    </div>
+    <div class="laps">
+      <button id="lapBtn" class="btn btn-lap" disabled>ラップ</button>
+      <ul id="lapList"></ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
